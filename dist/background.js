@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener((function(o,e,n){return o.popupMounted&&console.log("background notified that Popup.tsx has mounted."),!1}));
