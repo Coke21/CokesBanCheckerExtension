@@ -15,3 +15,11 @@ chrome.tabs.onUpdated.addListener((tabId: number, changeInfo: chrome.tabs.TabCha
 
 //     return isResponseAsync;
 // });
+
+chrome.runtime.onInstalled.addListener(details => {
+    chrome.storage.sync.set({
+        showJwtToken: true,
+        steamProfileElements: true,
+        battleMetricsElements: true
+    });
+});
