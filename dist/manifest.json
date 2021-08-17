@@ -9,6 +9,9 @@
     "host_permissions": [
         "*://cokesbanchecker.herokuapp.com/*"
     ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://cdn.jsdelivr.net/;"
+    },
     "icons": {
         "16": "images/cbc.png",
         "32": "images/cbc.png",
