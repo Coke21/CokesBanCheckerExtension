@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './Popup.scss';
+import './popup.scss';
 import * as Settings from './popupSettings';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode, faEye, faEyeSlash, faLightbulb } from '@fortawesome/free-solid-svg-icons'

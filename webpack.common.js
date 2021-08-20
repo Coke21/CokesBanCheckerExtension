@@ -7,7 +7,8 @@ module.exports = {
     background: path.join(__dirname, "src/background.ts"),
     battleMetrics: path.join(__dirname, "src/content/battleMetrics.ts"),
     steamProfile: path.join(__dirname, "src/content/steamProfile.ts"),
-    helper: path.join(__dirname, "src/helper.ts")
+    helper: path.join(__dirname, "src/helper.ts"),
+    globalBan: path.join(__dirname, "src/interface/globalBan.ts")
   },
   output: {
     path: path.join(__dirname, "dist/js"),

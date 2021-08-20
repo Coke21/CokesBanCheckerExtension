@@ -4,17 +4,31 @@ chrome.tabs.onUpdated.addListener((tabId: number, changeInfo: chrome.tabs.TabCha
     }
 });
 
-// // Listen to messages sent from other parts of the extension.
-// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-//     // onMessage must return "true" if response is async.
-//     let isResponseAsync = false;
+interface fetchRequest {
+    href: string,
+    init: RequestInit
+}
 
-//     if (request.popupMounted) {
-//         console.log('background notified that Popup.tsx has mounted.');
-//     }
+chrome.runtime.onMessage.addListener(function (request: fetchRequest, sender, sendResponse) {
+    let controller = new AbortController();
+    let timeoutId = setTimeout(() => controller.abort(), 60_000);
+    request.init.signal = controller.signal;
 
-//     return isResponseAsync;
-// });
+    fetch(request.href, request.init).then(function (response) {
+        return response.text().then(function (text) {
+            sendResponse([{
+                body: text,
+                status: response.status,
+                statusText: response.statusText,
+            }, null]);
+        });
+    }, function (error) {
+        sendResponse([null, error]);
+    });
+
+    clearTimeout(timeoutId);
+    return true;
+});
 
 chrome.runtime.onInstalled.addListener(details => {
     chrome.storage.sync.set({

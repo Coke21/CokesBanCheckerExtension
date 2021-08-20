@@ -1,6 +1,6 @@
 import axios from "axios";
 import { SyntheticEvent } from "react";
-import * as Helper from '../helper'
+import * as Helper from "../helper"
 
 export function changelogClick() {
     window.open("https://cokesbanchecker.herokuapp.com/otherApps", "_blank");
@@ -75,7 +75,6 @@ export async function checkClick(parameter, array: [SyntheticEvent]) {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json;charset=UTF-8',
-                // 'User-Agent': `Coke's Ban Checker Extension`,
                 'Authorization': `Bearer ${jwtTokenElement.value}`
             }
         };
