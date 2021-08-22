@@ -57,7 +57,7 @@ export default function Popup() {
     <div className="row mt-2">
       <div className="col d-flex align-items-center">
         <p className="lead mb-0">
-          <FontAwesomeIcon icon={faCode} /> Provide JWT Token:
+          <FontAwesomeIcon icon={faCode} /> Provide Token:
         </p>
         <button type="button" className="btn btn-outline-warning btn-sm ms-2" onClick={Settings.tokenClick} title="Get token">Get Token</button>
       </div>

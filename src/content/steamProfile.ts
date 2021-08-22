@@ -114,7 +114,7 @@ async function addProfileElements(jwtTokenInput: string) {
                 }
             } else {
                 span.innerHTML = `API Error (check console)`;
-                Helper.logError(`The API returned error - (checkGlobal endpoint - status ${gbResponse.status}), object:`);
+                Helper.logError(`The API returned error - (checkGlobal endpoint: status ${gbResponse.status}), object:`);
                 console.error(gbResponse);
             }
 
@@ -163,7 +163,7 @@ async function addProfileElements(jwtTokenInput: string) {
             paragraph.innerHTML = `API Error (check console)`;
             myDiv.appendChild(paragraph);
 
-            Helper.logError(`The API returned error - (findSteamId endpoint - status ${response.status}), object:`);
+            Helper.logError(`The API returned error - (findSteamId endpoint: status ${response.status}), object:`);
             console.error(response);
         }
     } catch (error: unknown) {
