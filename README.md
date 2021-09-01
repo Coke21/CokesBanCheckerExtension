@@ -26,4 +26,4 @@ The extension adds new UI elements to the Steam and BattleMetrics profiles, i.e.
 
 ## More information
 
-If you would like to read more about this extension, please visit https://cokesbanchecker.herokuapp.com/otherApps
+If you would like to read more about this extension, please visit https://cokesbanchecker.herokuapp.com/otherApps (requires to be authenticated with your Steam account in order to see this page)
