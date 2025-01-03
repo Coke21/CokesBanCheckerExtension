@@ -1,5 +1,5 @@
 chrome.tabs.onUpdated.addListener((tabId: number, changeInfo: chrome.tabs.TabChangeInfo, tab: chrome.tabs.Tab) => {
-    if (changeInfo.status == `complete`) {
+    if (changeInfo.status == `complete` && tab.url?.startsWith("http")) {
         chrome.tabs.sendMessage(tabId, "Let's go");
     }
 });

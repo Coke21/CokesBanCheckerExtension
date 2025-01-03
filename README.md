@@ -9,6 +9,7 @@
 2.  `npm i`
 3.  `npm run dev` to compile once or `npm run watch` to run the dev task in watch mode
 4.  `npm run build` to build a production (minified) version
+5.  Download bootstrap .js and .css files and put them in dist/js folder. The files that are needed are: bootstrap.min.css and bootstrap.bundle.min.js
 
 ## Installation
 

@@ -2,16 +2,14 @@
     "manifest_version": 3,
     "name": "Coke's Ban Checker Extension",
     "description": "Add elements to the Steam and BattleMetrics websites; need JWT Web Token from https://cokesbanchecker.herokuapp.com/",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "permissions": [
-        "storage"
+        "storage",
+        "tabs"
     ],
     "host_permissions": [
         "*://cokesbanchecker.herokuapp.com/*"
     ],
-    "content_security_policy": {
-        "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://cdn.jsdelivr.net/;"
-    },
     "icons": {
         "16": "images/cbc.png",
         "32": "images/cbc.png",
