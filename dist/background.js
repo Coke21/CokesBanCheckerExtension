@@ -4,7 +4,7 @@
       !*** ./src/background.ts ***!
       \***************************/
     chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-        if (changeInfo.status == `complete` && tab.url?.startsWith("http")) {
+        if (changeInfo.status == `complete`) {
             chrome.tabs.sendMessage(tabId, "Let's go");
         }
     });
